@@ -17,6 +17,10 @@ public class HexDecBin {
 	String bin = "";
 	String msg = "";
 	int num;
+	int numberBits = 10;
+	int bite = 8; // spelled wrong to avoid a keyword conflict
+	int nibble = 4;
+	int byteAnswer = 0, byteRemainder = 0;
 	
 	
 	public HexDecBin() {
@@ -43,6 +47,10 @@ public class HexDecBin {
 	public void setDecNumber() {
 		System.out.println("\nEnter the Dec number");
 		dec = kbd.nextLine();
+		num = Integer.parseInt(dec);
+		System.out.println("You have entered dec " + dec);
+		
+		
 		
 	}
 	
@@ -59,8 +67,11 @@ public class HexDecBin {
 		System.out.println("Number of bits is " + binary.length());
 		System.out.println("Number of whole nibbles (4 bits) is x with y bits left over");
 		System.out.println("Number of whole bytes (8 bits) is x with y bits remaining");
-	}
-	
+		byteAnswer = numberBits / bite;
+		byteRemainder = numberBits % bite;
+		
+		System.out.println("bits = " + numberBits + " bytes = " + byteAnswer + " remainder = " + byteRemainder);
+	}	
 	
 }
 	
