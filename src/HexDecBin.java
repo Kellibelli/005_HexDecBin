@@ -11,6 +11,8 @@ public class HexDecBin {
 	//Scanner for float is now working
 	Scanner kbd = new Scanner(System.in);
 	Boolean runAgain = true;
+	String goAgain = "";
+	String answer = "";
 	String name = "";
 	String hex = "";
 	String dec = "";
@@ -26,23 +28,25 @@ public class HexDecBin {
 	public HexDecBin() {
 		msg= "Welcome to my Hexadecimal, Decimal, or Binary conversion program!";
 		JOptionPane.showMessageDialog(null, msg);
-		msg = "What is your name?";
-		JOptionPane.showInputDialog(msg);
-		//store name somehow
-		msg= "Very nice to meet you " + name + " let's begin: ";
-		JOptionPane.showMessageDialog(null, msg);
+		String name = JOptionPane.showInputDialog("What is your name?");
+		JOptionPane.showMessageDialog(null, "Very nice to meet you " + name);
+		msg = "What do you want to convert, Hex, Dec, or Bin?";
+		goAgain = JOptionPane.showInputDialog(msg);
+		//Left off here
 	} // end of HexDecBin
-	
 	
 	public void setHexNumber() {
 		
-		System.out.println("\nEnter the hex number");
-		hex = kbd.nextLine();
+		String hex = JOptionPane.showInputDialog(null, "Enter the hex number");
+		//hex = kbd.nextLine();
 		// mouse over parseInt to read pop-up guide
 		num = Integer.parseInt(hex, 16);
-		System.out.println("You have entered hex " + hex );
-		System.out.println("Decimal value is: " + num + "(remember 0-" + num + " has " + (num+1) + " values)");
+		JOptionPane.showMessageDialog(null, "You have entered hex " + hex);
+		//System.out.println("You have entered hex " + hex );
+		JOptionPane.showMessageDialog(null, "Decimal value is: " + num + "(remember 0-" + num + " has " + (num+1) + " values)");
+		//System.out.println();
 	} //end of getHexNumber
+	
 	
 	public void setDecNumber() {
 		System.out.println("\nEnter the Dec number");
