@@ -25,6 +25,7 @@ public class HexDecBin {
 	int byteAnswer = 0, byteRemainder = 0;
 	
 	
+	
 	public HexDecBin() {
 		msg= "Welcome to my Hexadecimal, Decimal, or Binary conversion program!";
 		JOptionPane.showMessageDialog(null, msg);
@@ -49,28 +50,35 @@ public class HexDecBin {
 	
 	
 	public void setDecNumber() {
-		System.out.println("\nEnter the Dec number");
-		dec = kbd.nextLine();
-		num = Integer.parseInt(dec);
-		System.out.println("You have entered dec " + dec);
+		String dec = JOptionPane.showInputDialog(null, "Enter the Dec number");
+		//System.out.println("\nEnter the Dec number");
+		//dec = kbd.nextLine();
 		
+		num = Integer.parseInt(dec);
+		//System.out.println("You have entered dec " + dec);
+		JOptionPane.showMessageDialog(null, "You have entered dec " + dec);
 		
 		
 	}
 	
 	public void setBinNumber() {
-		System.out.println("\nEnter the Bin number");
-		bin = kbd.nextLine();
+		String bin = JOptionPane.showInputDialog(null, "Enter the Bin number");
+		//System.out.println("\nEnter the Bin number");
+		//bin = kbd.nextLine();
 	}
 	
 	void convert() {
 		
 		String binary = Integer.toBinaryString(num);
 		
-		System.out.println("Binary value is: " + binary);
-		System.out.println("Number of bits is " + binary.length());
-		System.out.println("Number of whole nibbles (4 bits) is x with y bits left over");
-		System.out.println("Number of whole bytes (8 bits) is x with y bits remaining");
+		JOptionPane.showMessageDialog(null, "Binary value is: " + binary);
+		//System.out.println("Binary value is: " + binary);
+		JOptionPane.showMessageDialog(null, "Number of bits is " + binary.length());
+		//System.out.println("Number of bits is " + binary.length());
+		JOptionPane.showMessageDialog(null, "Number of whole nibbles (4 bits) is "+ byteAnswer + " with" + numberBits + " bits left over");
+		//System.out.println("Number of whole nibbles (4 bits) is"+ byteAnswer + "with" + numberBits + "bits left over");
+		JOptionPane.showMessageDialog(null, "Number of whole bytes (8 bits) is " + byteRemainder + " with"+ numberBits +" bits remaining");
+		//System.out.println("Number of whole bytes (8 bits) is" + byteRemainder + "with"+ numberBits +"bits remaining");
 		byteAnswer = numberBits / bite;
 		byteRemainder = numberBits % bite;
 		
