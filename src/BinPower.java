@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class BinPower {
 	//Fixed Scanner bug for float inputs
 	
@@ -27,7 +29,7 @@ public class BinPower {
 		double base;
 		int ans = 0;
 		double answer;
-		String name = "";
+		
 
 		
 		
@@ -40,10 +42,11 @@ public class BinPower {
 		//Math myMath = new Math();
 		//because it is "static" -- means just use it!
 		
-		
-		System.out.println("Hello most amazing Java student! What is your name?");
-		name = input.nextLine();
-		System.out.println("Nice to meet you " + name );
+		/*
+		//System.out.println("Hello most amazing Java student! What is your name?");
+		JOptionPane.showMessageDialog(null, "Hello most amazing Java student! What is your name?");
+		String name = JOptionPane.showInputDialog("What is your name?");
+		JOptionPane.showMessageDialog(null, "Very nice to meet you " + name);
 		
 		System.out.println(name + " what base number do you want?");
 		base = input.nextDouble();
@@ -58,7 +61,7 @@ public class BinPower {
 		answer = Math.pow(base, exp );
 		System.out.println("Answer is: " + answer);
 		
-		
+		*/
 		
 		
 	}

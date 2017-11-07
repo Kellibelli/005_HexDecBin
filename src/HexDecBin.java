@@ -31,12 +31,15 @@ public class HexDecBin {
 		JOptionPane.showMessageDialog(null, msg);
 		String name = JOptionPane.showInputDialog("What is your name?");
 		JOptionPane.showMessageDialog(null, "Very nice to meet you " + name);
-		msg = "What do you want to convert, Hex, Dec, or Bin?";
+		msg = "What do you want to start with, Hex, Dec, or Bin?";
 		goAgain = JOptionPane.showInputDialog(msg);
+		if (msg == ("Hex")) {
+			
+		}
 		//Left off here
 	} // end of HexDecBin
 	
-	public void setHexNumber() {
+public void setHexNumber() {
 		
 		String hex = JOptionPane.showInputDialog(null, "Enter the hex number");
 		//hex = kbd.nextLine();
@@ -47,6 +50,7 @@ public class HexDecBin {
 		JOptionPane.showMessageDialog(null, "Decimal value is: " + num + "(remember 0-" + num + " has " + (num+1) + " values)");
 		//System.out.println();
 	} //end of getHexNumber
+	
 	
 	
 	public void setDecNumber() {
@@ -75,9 +79,9 @@ public class HexDecBin {
 		//System.out.println("Binary value is: " + binary);
 		JOptionPane.showMessageDialog(null, "Number of bits is " + binary.length());
 		//System.out.println("Number of bits is " + binary.length());
-		JOptionPane.showMessageDialog(null, "Number of whole nibbles (4 bits) is "+ byteAnswer + " with" + numberBits + " bits left over");
+		JOptionPane.showMessageDialog(null, "Number of whole nibbles (4 bits) is "+ byteAnswer + " with " + numberBits + " bits left over");
 		//System.out.println("Number of whole nibbles (4 bits) is"+ byteAnswer + "with" + numberBits + "bits left over");
-		JOptionPane.showMessageDialog(null, "Number of whole bytes (8 bits) is " + byteRemainder + " with"+ numberBits +" bits remaining");
+		JOptionPane.showMessageDialog(null, "Number of whole bytes (8 bits) is " + byteRemainder + " with "+ numberBits +" bits remaining");
 		//System.out.println("Number of whole bytes (8 bits) is" + byteRemainder + "with"+ numberBits +"bits remaining");
 		byteAnswer = numberBits / bite;
 		byteRemainder = numberBits % bite;
@@ -86,7 +90,7 @@ public class HexDecBin {
 	}	
 	
 }
-	
+
 	
 	
 	
